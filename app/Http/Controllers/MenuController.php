@@ -10,16 +10,16 @@ class MenuController extends Controller
      * Display a listing of the resource.
      */
     public function home()
-    {
-        $gerechten = Gerecht::take(4)->get();
-        return view('welcome', compact('gerechten'));
-    }
+{
+    $gerechten = Gerecht::take(4)->get();
+    return view('welcome', compact('gerechten'));
+}
 
-    public function index()
-    {
-        $gerechten = Gerecht::all();
-        return view('menu', compact('gerechten'));
-    }
+public function index()
+{
+    $gerechten = Gerecht::all();
+    return view('menu.index', compact('gerechten'));
+}
     /**
      * Show the form for creating a new resource.
      */

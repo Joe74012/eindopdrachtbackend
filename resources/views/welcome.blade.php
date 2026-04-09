@@ -19,7 +19,7 @@
             <h2 class="text-xl font-bold">PizzaHub</h2>
 
             <nav class="hidden lg:flex gap-6">
-                <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
+                <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Dashboard</a>
                 <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">About</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
@@ -134,10 +134,6 @@
                  alt="{{ $gerecht->naam }}">
             <div class="p-4">
                 <h3 class="text-lg font-bold text-black mb-1">{{ $gerecht->naam }}</h3>
-                <div class="flex items-center gap-1 text-sm text-gray-500 mb-3">
-                    <span class="text-orange-500">★</span>
-                    <span>4.8 (120+ reviews)</span>
-                </div>
                 <div class="flex justify-between items-center">
                     <span class="text-orange-600 text-xl font-bold">${{ $gerecht->prijs }}</span>
                     <button class="bg-orange-600 text-white px-5 py-2 rounded-full hover:bg-orange-700 transition-colors font-semibold">
