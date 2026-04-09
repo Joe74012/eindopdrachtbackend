@@ -21,7 +21,7 @@
             <nav class="hidden lg:flex gap-6">
                 <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
                 <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
-                <a href="#" class="font-semibold hover:text-orange-600 transition-colors">About</a>
+                <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors">About</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
             </nav>
 
@@ -95,7 +95,7 @@
         </div>
 
         <!-- Lunch Special -->
-        <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 text-left relative">
+        <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 relative">
             <div class="flex justify-between items-start mb-4">
                 <span class="bg-orange-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Mon-Fri 11-3PM</span>
             </div>
