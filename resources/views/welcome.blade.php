@@ -19,7 +19,7 @@
             <h2 class="text-xl font-bold">PizzaHub</h2>
 
             <nav class="hidden lg:flex gap-6">
-                <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Dashboard</a>
+                <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
                 <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">About</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
@@ -50,7 +50,7 @@
 
         <section class="relative flex flex-col justify-center items-center text-center px-8 py-32 w-full"
          style="background-image: url('{{ asset('images/pizza2.jpg') }}'); background-size: cover; background-position: center;">
-    
+
     <!-- Overlay -->
     <div class="absolute inset-0 bg-white/70"></div>
 
@@ -79,7 +79,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
         <!-- Family Deal -->
-        <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 text-left relative">
+        <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 relative">
             <div class="flex mb-4">
                 <span class="bg-orange-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Save $10</span>
             </div>
@@ -129,7 +129,7 @@
     <div class="grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
         @foreach($gerechten as $gerecht)
         <div class="bg-white rounded-2xl shadow overflow-hidden">
-            <img src="{{ asset($gerecht->afbeelding) }}" 
+            <img src="{{ asset($gerecht->afbeelding) }}"
                  class="w-full h-52 object-cover"
                  alt="{{ $gerecht->naam }}">
             <div class="p-4">

@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Gerecht extends Model
 {
-    protected $table = 'gerechten'; // ← dit vertelt Laravel de juiste tabelnaam
-
+    protected $table = 'gerechten';
     protected $fillable = ['naam', 'beschrijving', 'prijs', 'categorie'];
 }
