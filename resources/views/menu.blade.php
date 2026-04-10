@@ -16,7 +16,7 @@
             <nav class="hidden lg:flex gap-6">
                 <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
                 <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
-                <a href="#" class="font-semibold hover:text-orange-600 transition-colors">About</a>
+                <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors">About</a>
                 <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
             </nav>
 
