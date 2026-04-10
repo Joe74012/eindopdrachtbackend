@@ -48,8 +48,7 @@
             </div>
         </header>
 
-        <section class="relative flex flex-col justify-center items-center text-center px-8 py-32 w-full"
-         style="background-image: url('{{ asset('images/pizza2.jpg') }}'); background-size: cover; background-position: center;">
+        <section class="relative flex flex-col justify-center items-center text-center px-8 py-32 w-full" style="background-image: url('{{ asset('images/pizza2.jpg') }}'); background-size: cover; background-position: center;">
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-white/70"></div>

@@ -9,8 +9,16 @@ class MenuController extends Controller
     public function home()
 {
     $gerechten = Gerecht::take(4)->get();
-    return view('welcome', compact('gerechten'));
+    $heroGerecht = Gerecht::first(); // Eerste gerecht voor hero afbeelding
+    return view('welcome', compact('gerechten', 'heroGerecht'));
 }
+
+    public function about()
+    {
+        $heroGerecht = Gerecht::first();
+
+        return view('about', compact('heroGerecht'));
+    }
 
 public function index()
 {
