@@ -50,10 +50,8 @@
 
         <section class="relative flex flex-col justify-center items-center text-center px-8 py-32 w-full" style="background-image: url('{{ asset('images/pizza2.jpg') }}'); background-size: cover; background-position: center;">
 
-    <!-- Overlay -->
     <div class="absolute inset-0 bg-white/70"></div>
 
-    <!-- Content -->
     <div class="relative z-10 max-w-2xl">
         <h1 class="text-5xl font-bold mb-4 text-gray-900">Fresh Pizza,<br>Real Italian Taste.</h1>
         <p class="mb-8 text-gray-600">
@@ -70,14 +68,12 @@
         </div>
     </div>
 </section>
-<!-- Special Offers -->
 <section class="px-8 py-16 max-w-6xl mx-auto w-full text-center">
     <h2 class="text-3xl font-bold mb-2">Special Offers</h2>
     <p class="text-gray-500 mb-10">Amazing deals you don't want to miss!</p>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-        <!-- Family Deal -->
         <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 relative">
             <div class="flex mb-4">
                 <span class="bg-orange-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Save $10</span>
@@ -93,7 +89,6 @@
             </button>
         </div>
 
-        <!-- Lunch Special -->
         <div class="bg-white rounded-2xl flex flex-col items-center justify-center text-center shadow p-6 relative">
             <div class="flex justify-between items-start mb-4">
                 <span class="bg-orange-600 text-white text-sm px-4 py-1 rounded-full font-semibold">Mon-Fri 11-3PM</span>
@@ -111,7 +106,6 @@
 
     </div>
 </section>
-        <!-- Populaire pizzas -->
 <section class="px-8 py-12 max-w-6xl mx-auto w-full">
     <div class="flex justify-between items-start mb-8">
         <div>
@@ -144,38 +138,32 @@
         @endforeach
     </div>
 </section>
-        <!-- How It Works -->
 <section class="px-8 py-16 max-w-6xl mx-auto w-full text-center">
     <h2 class="text-3xl font-bold mb-2">How It Works</h2>
     <p class="text-gray-500 mb-16">Four simple steps to delicious pizza</p>
 
     <div class="relative flex justify-between items-start">
 
-        <!-- Verbindingslijn -->
         <div class="absolute top-10 left-16 right-16 h-0.5 bg-orange-200 z-0"></div>
 
-        <!-- Stap 1 -->
         <div class="relative z-10 flex flex-col items-center w-1/4 px-4">
             <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold mb-6">01</div>
             <h3 class="font-bold text-lg mb-2">Choose Your Pizza</h3>
             <p class="text-gray-500 text-sm">Browse our menu and select your favorite pizza</p>
         </div>
 
-        <!-- Stap 2 -->
         <div class="relative z-10 flex flex-col items-center w-1/4 px-4">
             <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold mb-6">02</div>
             <h3 class="font-bold text-lg mb-2">Customize</h3>
             <p class="text-gray-500 text-sm">Add extra toppings or create your own combination</p>
         </div>
 
-        <!-- Stap 3 -->
         <div class="relative z-10 flex flex-col items-center w-1/4 px-4">
             <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold mb-6">03</div>
             <h3 class="font-bold text-lg mb-2">Order & Pay</h3>
             <p class="text-gray-500 text-sm">Secure checkout with multiple payment options</p>
         </div>
 
-        <!-- Stap 4 -->
         <div class="relative z-10 flex flex-col items-center w-1/4 px-4">
             <div class="w-20 h-20 bg-orange-600 rounded-full flex items-center justify-center text-white text-xl font-bold mb-6">04</div>
             <h3 class="font-bold text-lg mb-2">Enjoy</h3>
@@ -184,8 +172,6 @@
 
     </div>
 </section>
-
-        <!-- Footer -->
         <footer class="mt-auto py-6 bg-white text-center text-sm text-gray-500">
             &copy; {{ date('Y') }} PizzaHub. All rights reserved.
         </footer>
