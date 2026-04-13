@@ -1,15 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Gerecht; // ← deze regel mist!
+use App\Models\Gerecht;
 use Illuminate\Http\Request;
 
 class MenuController extends Controller
 {
     public function home()
 {
-    $gerechten = Gerecht::take(4)->get();
-    $heroGerecht = Gerecht::first(); // Eerste gerecht voor hero afbeelding
+    $gerechten = Gerecht::take(4)->get(); // 4 voorbeeld gerechten laten zien
+    $heroGerecht = Gerecht::first(); // gerecht aan hero section
     return view('welcome', compact('gerechten', 'heroGerecht'));
 }
 
@@ -20,11 +20,11 @@ class MenuController extends Controller
         return view('about', compact('heroGerecht'));
     }
 
-public function index()
-{
-    $gerechten = Gerecht::all();
-    return view('menu', compact('gerechten'));
-}
+    public function index()
+    {
+        $gerechten = Gerecht::all();
+        return view('menu', compact('gerechten'));
+    }
     public function create()
     {
 
@@ -55,11 +55,11 @@ public function index()
 
     public function update(Request $request, string $id)
     {
-        //
+
     }
 
     public function destroy(string $id)
     {
-        //
+
     }
 }

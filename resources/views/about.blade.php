@@ -21,7 +21,6 @@
         <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors" style="color: #E65100;">About</a>
         <a href="{{ route('contact') }}" class="font-semibold transition-colors">Contact</a>
     </nav>
-
     <div class="flex items-center gap-3">
         @if (Route::has('login'))
             @auth
