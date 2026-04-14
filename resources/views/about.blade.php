@@ -12,17 +12,15 @@
 </head>
 <body class="text-black bg-[#F5EBE0] min-h-screen flex flex-col font-sans" style="font-family: 'Instrument Sans', sans-serif;">
 
-<!-- Header / Nav -->
 <header class="flex justify-between items-center px-8 py-4 bg-white shadow-md sticky top-0 z-50">
     <h2 class="text-xl font-bold">PizzaHub</h2>
 
     <nav class="hidden lg:flex gap-6">
         <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
         <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
-        <a href="{{ route('about') }}" class="font-semibold" style="color: #E65100;">About</a>
-        <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
+        <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors" style="color: #E65100;">About</a>
+        <a href="{{ route('contact') }}" class="font-semibold transition-colors">Contact</a>
     </nav>
-
     <div class="flex items-center gap-3">
         @if (Route::has('login'))
             @auth

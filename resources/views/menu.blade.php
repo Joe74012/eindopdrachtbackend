@@ -10,38 +10,41 @@
 </head>
 <body class="bg-amber-50 text-[#1b1b18] min-h-screen font-sans">
 
-    <header class="flex justify-between items-center px-8 py-4 bg-white shadow-md sticky top-0 z-50">
-            <h2 class="text-xl font-bold">PizzaHub</h2>
+<header class="flex justify-between items-center px-8 py-4 bg-white shadow-md sticky top-0 z-50">
+    <h2 class="text-xl font-bold">PizzaHub</h2>
 
-            <nav class="hidden lg:flex gap-6">
-                <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
-                <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors">Menu</a>
-                <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors">About</a>
-                <a href="#" class="font-semibold hover:text-orange-600 transition-colors">Contact</a>
-            </nav>
+    <nav class="hidden lg:flex gap-6">
+        <a href="/" class="font-semibold hover:text-orange-600 transition-colors">Home</a>
+        <a href="{{ route('menu.index') }}" class="font-semibold hover:text-orange-600 transition-colors" style="color: #E65100;">Menu</a>
+        <a href="{{ route('about') }}" class="font-semibold hover:text-orange-600 transition-colors">About</a>
+        <a href="{{ route('contact') }}" class="font-semibold transition-colors">Contact</a>
+    </nav>
 
-             <div class="flex items-center gap-3">
-                @if (Route::has('login'))
-                    @auth
-                        <a href="{{ url('/dashboard') }}"
-                           class="inline-block px-5 py-1.5 border border-[#19140035] dark:border-[#3E3E3A] hover:border-orange-600 rounded-sm text-sm transition-colors">
-                            Dashboard
-                        </a>
-                    @else
-                        <a href="{{ route('login') }}"
-                           class="inline-block px-5 py-1.5 text-sm hover:text-orange-600 transition-colors">
-                            Log in
-                        </a>
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}"
-                               class="inline-block px-5 py-1.5 bg-orange-600 text-white rounded-lg text-sm hover:bg-orange-700 transition-colors">
-                                Register
-                            </a>
-                        @endif
-                    @endauth
+    <div class="flex items-center gap-3">
+        @if (Route::has('login'))
+            @auth
+                <a href="{{ url('/dashboard') }}"
+                   class="inline-block px-5 py-1.5 border border-[#19140035] hover:border-orange-600 rounded-sm text-sm transition-colors">
+                    Dashboard
+                </a>
+            @else
+                <a href="{{ route('login') }}"
+                   class="inline-block px-5 py-1.5 text-sm hover:text-orange-600 transition-colors">
+                    Log in
+                </a>
+                @if (Route::has('register'))
+                    <a href="{{ route('register') }}"
+                       class="inline-block px-5 py-1.5 text-white rounded-lg text-sm transition-colors"
+                       style="background-color: #E65100;"
+                       onmouseover="this.style.backgroundColor='#BF360C'"
+                       onmouseout="this.style.backgroundColor='#E65100'">
+                        Register
+                    </a>
                 @endif
-            </div>
-    </header>
+            @endauth
+        @endif
+    </div>
+</header>
 
     <!-- Menu sectie -->
     <section class="px-8 py-16 max-w-6xl mx-auto w-full text-center">
