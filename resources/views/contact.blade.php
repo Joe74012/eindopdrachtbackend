@@ -36,13 +36,6 @@
                    class="inline-block px-5 py-1.5 text-sm hover:text-orange-600 transition-colors">
                     Log in
                 </a>
-
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}"
-                       class="inline-block px-5 py-1.5 text-white rounded-lg text-sm transition-colors bg-orange-600 hover:bg-orange-700">
-                        Register
-                    </a>
-                @endif
             @endauth
         @endif
     </div>
