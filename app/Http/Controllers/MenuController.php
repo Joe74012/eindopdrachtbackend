@@ -4,34 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Gerecht;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MenuController extends Controller
 {
-    // 🔹 FRONTEND
-
     public function home()
     {
         $gerechten = Gerecht::take(4)->get();
-        $heroGerecht = Gerecht::first();
 
-        return view('welcome', compact('gerechten', 'heroGerecht'));
+        return view('welcome', compact('gerechten'));
     }
-
-    public function about()
-    {
-        $heroGerecht = Gerecht::first();
-
-        return view('about', compact('heroGerecht'));
-    }
-
-    public function menu()
-    {
-        $gerechten = Gerecht::all();
-        return view('menu', compact('gerechten'));
-    }
-
-    // 🔹 ADMIN (CRUD)
-
     public function adminIndex()
     {
         $gerechten = Gerecht::latest()->get();
@@ -44,20 +26,33 @@ class MenuController extends Controller
     }
 
     public function create()
+
     {
         return view('admin.gerechten.create');
     }
 
     public function store(Request $request)
     {
-        $validated = $request->validate([
+        $request->validate([
             'naam' => 'required|string|max:255',
             'beschrijving' => 'nullable|string',
             'prijs' => 'required|numeric|min:0',
             'categorie' => 'required|string',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
 
-        Gerecht::create($validated);
+        $data = $request->only([
+            'naam',
+            'beschrijving',
+            'prijs',
+            'categorie',
+        ]);
+
+        if ($request->hasFile('image')) {
+            $data['afbeelding'] = $request->file('image')->store('gerechten', 'public');
+        }
+
+        Gerecht::create($data);
 
         return redirect()->route('gerechten.index')
             ->with('success', 'Gerecht toegevoegd!');
@@ -75,7 +70,17 @@ class MenuController extends Controller
             'beschrijving' => 'nullable',
             'prijs' => 'required|numeric',
             'categorie' => 'required',
+            'image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
         ]);
+
+        if ($request->hasFile('image')) {
+
+            if ($gerecht->afbeelding) {
+                Storage::disk('public')->delete($gerecht->afbeelding);
+            }
+
+            $validated['afbeelding'] = $request->file('image')->store('gerechten', 'public');
+        }
 
         $gerecht->update($validated);
 

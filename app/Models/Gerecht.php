@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Gerecht extends Model
 {
     protected $table = 'gerechten';
-    protected $fillable = ['naam', 'beschrijving', 'prijs', 'categorie'];
+    protected $fillable = [
+        'naam',
+        'beschrijving',
+        'prijs',
+        'categorie',
+        'afbeelding',
+    ];
 }
