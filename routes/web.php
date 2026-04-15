@@ -36,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::put('/gerechten/{gerecht}', [MenuController::class, 'update'])->name('gerechten.update');
     Route::delete('/gerechten/{gerecht}', [MenuController::class, 'destroy'])->name('gerechten.destroy');
     Route::get('/admin/contacts', [ContactController::class, 'index'])->name('contacts.index');
+    Route::get('/admin/contacts/{contact}', [ContactController::class, 'show'])->name('contacts.show');
+    Route::delete('/admin/contacts/{contact}', [ContactController::class, 'destroy'])->name('contacts.destroy');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

@@ -26,7 +26,7 @@
         </a>
 
         {{-- Gerechten Beheren --}}
-        <a href="{{ route('menu.index') }}"
+        <a href="{{ route('gerechten.index') }}"
            style="display: inline-flex; align-items: center; gap: 8px; color: #374151; padding: 8px 18px; border-radius: 8px; font-size: 14px; text-decoration: none; transition: background .15s;"
            onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='transparent'">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">

@@ -58,7 +58,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- GERECHTEN -->
-                <a href="{{ route('menu.index') }}"
+                <a href="{{ route('gerechten.index') }}"
                    class="flex items-center gap-4 border rounded-xl p-5 hover:shadow transition">
 
                     <div class="bg-orange-500 text-white p-3 rounded-xl">
