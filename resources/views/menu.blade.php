@@ -32,15 +32,6 @@
                    class="inline-block px-5 py-1.5 text-sm hover:text-orange-600 transition-colors">
                     Log in
                 </a>
-                @if (Route::has('register'))
-                    <a href="{{ route('register') }}"
-                       class="inline-block px-5 py-1.5 text-white rounded-lg text-sm transition-colors"
-                       style="background-color: #E65100;"
-                       onmouseover="this.style.backgroundColor='#BF360C'"
-                       onmouseout="this.style.backgroundColor='#E65100'">
-                        Register
-                    </a>
-                @endif
             @endauth
         @endif
     </div>
@@ -76,7 +67,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-left" id="pizza-grid">
             @foreach($gerechten as $gerecht)
             <div class="pizza-card rounded-2xl overflow-hidden shadow relative" data-category="{{ strtolower($gerecht->categorie) }}">
-                <img src="{{ asset($gerecht->afbeelding) }}"
+                <img src="{{ asset('storage/' . $gerecht->afbeelding) }}"
                      class="w-full h-56 object-cover"
                      alt="{{ $gerecht->naam }}">
                 <span class="absolute top-3 right-3 bg-orange-600 text-white text-xs px-3 py-1 rounded-full font-semibold capitalize">
