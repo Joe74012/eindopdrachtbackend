@@ -27,10 +27,30 @@
             <input type="number" step="0.01" name="prijs" value="{{ $gerecht->prijs }}"
                    class="w-full border p-2 mb-4 rounded">
 
-            <!-- CATGORIE -->
+            <!-- CATEGORIE (BURGER MENU / DROPDOWN) -->
             <label class="block font-semibold mb-1">Categorie</label>
-            <input type="text" name="categorie" value="{{ $gerecht->categorie }}"
-                   class="w-full border p-2 mb-4 rounded">
+            <select name="categorie"
+                    class="w-full border p-2 mb-4 rounded bg-white">
+
+                <option value="">Kies een categorie</option>
+
+                <option value="classic" {{ $gerecht->categorie == 'classic' ? 'selected' : '' }}>
+                    Classic
+                </option>
+
+                <option value="specialty" {{ $gerecht->categorie == 'specialty' ? 'selected' : '' }}>
+                    Specialty
+                </option>
+
+                <option value="vegetarian" {{ $gerecht->categorie == 'vegetarian' ? 'selected' : '' }}>
+                    Vegetarian
+                </option>
+
+                <option value="premium" {{ $gerecht->categorie == 'premium' ? 'selected' : '' }}>
+                    Premium
+                </option>
+
+            </select>
 
             <!-- OUDE AFBEELDING -->
             <label class="block font-semibold mb-1">Huidige afbeelding</label>
@@ -40,13 +60,13 @@
                      class="w-40 h-40 object-cover rounded mb-4">
             @endif
 
-            <!-- NIEUWE AFBELDING -->
+            <!-- NIEUWE AFBEELDING -->
             <label class="block font-semibold mb-1">Nieuwe afbeelding</label>
             <input type="file" name="image"
                    class="w-full border p-2 mb-4 rounded">
 
             <!-- BUTTON -->
-            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+            <button class="bg-orange-600 text-white px-4 py-2 rounded">
                 Update
             </button>
 
