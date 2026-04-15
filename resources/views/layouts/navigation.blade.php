@@ -2,15 +2,8 @@
 
     {{-- Logo + Titel --}}
     <div style="display: flex; align-items: center; gap: 12px; min-width: 160px;">
-        <div style="width: 42px; height: 42px; background: #f97316; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/>
-            </svg>
-        </div>
-        <div>
             <div style="font-weight: 700; font-size: 16px; color: #111;">PizzaHub</div>
             <div style="font-size: 12px; color: #9ca3af;">Dashboard</div>
-        </div>
     </div>
 
     {{-- Navigatie links --}}
@@ -18,9 +11,10 @@
 
         {{-- Overzicht (actief) --}}
         <a href="{{ route('dashboard') }}"
-           style="display: inline-flex; align-items: center; gap: 8px; background: #f97316; color: #fff; padding: 8px 18px; border-radius: 8px; font-weight: 600; font-size: 14px; text-decoration: none;">
+           style="display: inline-flex; align-items: center; gap: 8px; color: #374151; padding: 8px 18px; border-radius: 8px; font-size: 14px; text-decoration: none; transition: background .15s;"
+           onmouseover="this.style.background='#f3f4f6'" onmouseout="this.style.background='transparent'">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M3 3h8v8H3zm0 10h8v8H3zm10-10h8v8h-8zm0 10h8v8h-8z"/>
+                <path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/>
             </svg>
             Overzicht
         </a>
